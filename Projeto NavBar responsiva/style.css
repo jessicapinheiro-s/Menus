@@ -20,20 +20,25 @@ body{
 }
 .container ul li{
     margin: 0 10px 0 10px;
+    color: #319292;
 }
 .logoMenu{
-    display: block;
+    display: none;
 }
 .close-logo-menu{
     display: none;
 }
-.close-logo-menu.responsive{
-    display: block;
+.close-logo-menu i{
+    font-size: 30px;
 }
+
 .logoMenu.remoResponsive{
     display: none;
 }
-/*responsivo
+.navResponsive{
+    display: none;
+}
+/*responsivo*/
 @media (max-width: 800px){
     .container ul{
         display: none;
@@ -45,4 +50,21 @@ body{
     .logoMenu i{
         font-size: 30px;
     }
-}*/
+    .close-logo-menu.responsive{
+        display: block;
+        border: 1px solid red;
+    }
+    .navResponsive.responsive{
+        display: block;
+        padding: 15px;
+        border-bottom: 1px solid #d6d6d6;
+        box-shadow: #d6d6d6 0px 0px 5px 0px;
+    }
+    .navResponsive .menuRespon ul{
+        list-style: none;
+    }
+    .navResponsive .menuRespon ul li{
+        margin: 5px 0 5px 0;
+        color: #319292;
+    }
+}
