@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+:root{
+    --bg-menu-claro: #73b6d1;
+    --bg-menu-escuro: #2ba0ce; 
+    --font-color: #fff;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+}
+.menu-dashboard{
+    max-width: 100px;
+    height: 100%;
+    padding: 15px;
+    transition:  max-width.3s ease;
+    background: var(--bg-menu-escuro);
+}
+.menu-dashboard, .top-menu, .top-menu .logo, .top-menu .toggle, .menu, .menu .enlace, .input-search{
+    align-items: center;
+}
+.menu-dashboard, .top-menu, .top-menu .logo{
+    text-align: center;
+}
+.top-menu, .top-menu .logo, .top-menu .toggle, .menu, .menu .enlace, .menu .enlace i, .input-search, .input-search i {
+    margin: 0 auto;
+}
+.top-menu, .top-menu .logo, .menu .enlace, .input-search{
+    width: 80%;
+}
+.top-menu .toggle, .top-menu .logo, .input-search{
+    display: flex;
+}
+.top-menu .toggle, .top-menu .toggle i, .top-menu .logo img{
+    width: 40px;
+}
+.input-search input::placeholder, .input-search input, .input-search, .menu-dashboard {
+    color: var(--font-color);
+}
+.top-menu .logo{
+    margin-bottom: 20px;
+}
+.top-menu .toggle{
+    height: 40px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.top-menu .toggle i{
+    font-size: 1.8rem;
+}
+.top-menu .logo img{
+    transition: width.3s ease;
+}
+.top-menu .logo span{
+    font-size: 1.25rem;
+    margin-left: 10px;
+    display: none;
+}
+.menu{
+    width: 100%;
+}
+.menu .enlace{
+    margin-bottom: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition:  all.3s ease;
+}
+.menu .enlace:hover{
+    background: var(--bg-menu-claro);
+}
+.menu .enlace i{
+    font-size: 1.8rem;
+    padding: 10px;
+}
+.input-search{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--font-color);
+}
+.input-search i{
+    font-size: 1.800rem;
+    padding: 10px;
+}
+.input-search input{
+    border:none;
+    outline: none;
+    background-color: transparent;
+    width: 100%;
+    display: none;
+    font-size: 2rem;
+    font-size: 0.975rem;
+}
+.menu-dashboard.open{
+    max-width: 250px ;
+}
+.menu .enlace span{
+    opacity: 0;
+    transition: opacity 2s ease;
+    font-size: 0.975rem;
+}
+.menu-dashboard.open .top-menu .logo span{
+    display: block;
+}
+.menu-dashboard.open .input-search
+.menu-dashboard.open .menu .enlace{
+    width: auto;
+}
+.menu-dashboard.open .input-search input{
+    display: block;
+}
+.menu-dashboard.open .menu .enlace{
+    text-align: left;
+}
+.menu-dashboard.open .menu .enlace span{
+    opacity: 1;
+}
